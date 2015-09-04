@@ -1,13 +1,10 @@
 class Ship
 
-  attr_reader :capacity
+  attr_reader :capacity, :available_seats
 
   def initialize
     @capacity = 8
-  end
-
-  def capacity
-    @capacity
+    @available_seats = @capacity
   end
 
 end
