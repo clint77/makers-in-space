@@ -8,7 +8,8 @@ feature "Booking a flight" do
   end
 
   scenario "click the book now button" do
-    click_button('BOOK NOW')
-    expect(page).to have_css "form booking_form"
+    visit "/bookings"
+    click_button("BOOK NOW")
+    expect(page).to have_css "form#booking_form"
   end
 end
