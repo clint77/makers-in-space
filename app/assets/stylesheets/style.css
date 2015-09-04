@@ -1,0 +1,132 @@
+body {
+	font-family: "Futura", Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: 1.4;
+	/*as you make the font size bigger, you bring the multiplier of line-height down*/
+	background: #ffffff;
+	color: #000000;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 700px;
+	margin: 0 0 30px 0;
+}
+
+p {
+	margin: 30px 0 30px 0;
+}
+
+header, section {
+	/*by default it expands to 100% width*/
+	/*When you tell something to be 100%, unless it's parents are set to 100%, it will only be 100% of content*/
+	background-position: center center; 
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	/*This last line is to tell everything that is absolute, like the form, to stay within its parent, or within its section in this case*/
+}
+
+html, body {
+	height: 100%;
+}
+/*You have to tell both html and body*/
+
+.full {
+/*You can leave off the type, and just apply to the class, don't have to say section.full and header.full. Just saying .full will cover both.*/
+	height: 100%;
+}
+
+.content {
+	width: 550px;
+	margin: 60px auto 60px auto;
+}
+
+header {
+	background-image: url(../images/earth1.png);
+}
+
+/*section#cyclists {
+	background-image: url(../images/space1.png);
+}*/
+
+section#confirmation {
+	background-image: url(../images/space1.png);
+}
+
+section#social {
+	background-image: url(../images/earth3.png);
+}
+
+h1 {
+	/*text align can only do middle horizontally, not middle vertically - and we don't want pixel sized margins or that's not responsive*/
+	position: absolute;
+	/*position absolute moves it onto a higher up layer*/
+	left: 50%;
+	top: 50%;
+	/*The percentage setting it using the top left point of the image as the centre of the image, to decide the relative position - to it won't be the center*
+	/*Knowing the width and height, as you export from photoshop*/
+	width: 250px;
+	height: 250px;
+	margin: -125px 0 0 -125px;
+	/*you know you need to pull it back and up half of the size of the image, so you are setting the margin
+	the 50% will change but the size of the image never will
+	this is a very common pattern for something that needs to be absolute positioned*/
+	/*There is a css3 way of doing this on one line, but that's not universally supported: -webkit-transform: translate(-50%, -50%); and then it can auto figure how to put itelf in the middle, without the calculations*/
+}
+
+div#mc_embed_signup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 130px;
+	background: #000000;
+	padding: 20px;
+	margin: -65px 0 0 -200px;
+	/*Remember, you have to realign from the top left corner, so in the rectangle, it's pulling up minus half height, pull back half width*/
+}
+
+label {
+	display: none;
+	/*the above is getting rid of the "email" label; you could do it in the html, but Sam prefers to do it in css*/
+}
+
+input[type="email"] {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #ffffff;
+	background: #000000;
+	color: #ffffff;
+	padding: 0;
+	margin: 0 0 20px 0;
+	font-size: 20px;
+	outline: none;
+	/*you add transitions to things before they happen; you add it to the normal rule, so that everytime there is a transition, it will perform it as instructed.*/
+	transition: all .5s;
+	/*recommends transitions less than 1.2s always. transition all will change everything that is supposed to change*/
+	/*javascript is not hardware accelerated, css is hardcoded and is hardware accelerated. so much better to use css to do the animations*/
+	/*keep your transitions the same time, be consistent*/
+}
+
+input[type="email"]:focus {
+	/*focus means cursor is clicked inside the box, that's what focus is.*/
+	border-bottom-color: #f27490;
+}
+
+input[type="submit"] {
+	background: #000000;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	margin: none;
+	margin: 5px 10px 5px 10px;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+input[type="submit"]:hover {
+	border-color: #f27490;
+}
+
+
