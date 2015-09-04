@@ -1,7 +1,7 @@
 class Passenger
 
-  def reserve seat
-    
+  def book_seat seat
+    seat.book
   end
 
 end
