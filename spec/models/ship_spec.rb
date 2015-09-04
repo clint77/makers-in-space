@@ -1,10 +1,4 @@
 require 'Ship'
-require 'Seat'
-require 'rails_helper'
-
-RSpec.describe Ship, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
 
 describe Ship do
 
@@ -31,4 +25,4 @@ describe Ship do
   end
 
 
-end 
+end
