@@ -2,6 +2,9 @@ require 'Seat'
 
 describe Seat do
 
+  let(:ship) { double :ship, reduce_available_seats: nil }
+  let(:subject) { Seat.new(ship) }
+
   describe "by default" do
 
     it "should not be booked by default" do

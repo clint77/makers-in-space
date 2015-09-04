@@ -1,22 +1,20 @@
 class Seat
 
-  # attr_accessor :booked
+  attr_accessor :price
 
-  def initialize
+  def initialize ship
     @booked = false
     @price = 900000
+    @ship = ship
   end
 
   def book
     @booked = true
+    @ship.reduce_available_seats
   end
 
   def booked?
     @booked
-  end
-
-  def price
-    @price
   end
 
 end
