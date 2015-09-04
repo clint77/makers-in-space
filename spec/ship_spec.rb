@@ -1,4 +1,5 @@
 require 'Ship'
+require 'Seat'
 
 describe Ship do
 
@@ -16,9 +17,9 @@ describe Ship do
 
   describe "available seats" do
 
+
     it "can be reduced upon booking" do
-      expect(subject.available_seats).to eq(8)
-      
+      subject.reduce_available_seats
       expect(subject.available_seats).to eq(7)
     end
 
