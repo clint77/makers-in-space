@@ -1,3 +1,11 @@
+###Results
+
+After reading the brief and deciding on a loose class structure, we asked the client for his priorities. We split into a front end and back end team, with the plan to integrate by the end of the first code session.
+
+With a suite of passing tests from both teams, we started trying to integrate the business logic with the views just after lunch, taking information into the form to create the booking. But we hadn't communicated well enough about the messages needed from the front end to successfully activate the back end with enough time to deliver code we could be proud of. 
+
+We learned a strategy for future time-pressured builds - as a group, build to the point where you can get the simplest piece of data from the front to the end point, before splitting teams and enhancing. That way, the structure of the path is in place, and adding features will be much smoother.
+
 ###Brief
 
 Makers Academy is going to space!
