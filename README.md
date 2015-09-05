@@ -6,6 +6,8 @@ With a suite of passing tests from both teams, we started trying to integrate th
 
 We learned a strategy for future time-pressured builds - as a group, build to the point where you can get the simplest piece of data from the front to the end point, before splitting teams and enhancing. That way, the structure of the path is in place, and adding features will be much smoother.
 
+(It's not a hackathon because the code must be test driven and beautiful.)
+
 ###Brief
 
 Makers Academy is going to space!
